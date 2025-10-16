@@ -1,0 +1,15 @@
+{
+  "name": "space-typing-war",
+  "version": "1.0.0",
+  "description": "A multiplayer typing game.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}

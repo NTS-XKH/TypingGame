@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ເກມພິມໄວແຂ່ງລົດ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen">
+        <h1 class="main-title">Space Typing War</h1>
+        <p>ປ້ອນຊື່ຂອງທ່ານເພື່ອເຂົ້າຮ່ວມການແຂ່ງຂັນ</p>
+        <input type="text" id="player-name-input" placeholder="ຊື່ຜູ້ຫຼິ້ນ...">
+        <button id="join-button">ເຂົ້າຮ່ວມ</button>
+    </div>
+
+    <h1 id="game-title" class="main-title hidden">Space Typing War</h1>
+
+    <div id="game-wrapper" class="hidden">
+        <canvas id="game-canvas"></canvas>
+        <div id="hud">HP: <span id="player-hp">20</span> | ຄະແນນ: <span id="player-score">0</span></div>
+        <div id="typing-area">
+            <div id="word-display"></div>
+            <input type="text" id="word-input" placeholder="ພິມຄຳສັບຢູ່ເທິງນີ້..." autocomplete="off" disabled>
+        </div>
+
+        <button id="start-button">ເລີ່ມເກມ</button>
+    </div>
+
+    <div id="winner-modal" class="hidden">
+        <!-- ... no changes here ... -->
+        <div class="modal-content">
+            <h2 id="winner-message">ເກມຈົບ!</h2>
+            <div id="scoreboard"></div>
+            <button id="play-again-button">ຫຼິ້ນອີກຄັ້ງ</button>
+        </div>
+    </div>
+
+    <button id="ready-button" class="hidden">ພ້ອມ (Ready)</button>
+
+    <!-- ສຽງປະກອບ (ຕົວຢ່າງ) -->
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="car-engine-sound" src="sounds/car-engine.mp3" loop></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+
+    <script src="/socket.io/socket.io.js"></script> <!-- ຕ້ອງຢູ່ກ່ອນ script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
